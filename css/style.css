@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Unbounded:wght@200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Unbounded:wght@200;300;400;500;600;700;800;900&display=swap");
 :root {
   --cta: black;
   --fondlow:gray;
@@ -7,6 +7,10 @@
 * {
   outline: none;
   scroll-behavior: smooth;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 *::-moz-selection {
@@ -71,7 +75,7 @@ body {
   width: 90%;
 }
 .struct p {
-  font-family: roboto;
+  font-family: Exo;
   opacity: 0.6;
   font-size: 1em;
   text-align: justify;
@@ -138,16 +142,21 @@ body {
   content: " ";
   width: 100%;
   height: 100%;
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0.89)));
-  background: linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.89));
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.89)), to(rgba(0, 0, 0, 0.89)));
+  background: linear-gradient(top, rgba(0, 0, 0, 0.89), rgba(0, 0, 0, 0.89));
   opacity: 0;
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
-.container .img:hover .after {
+.container .img:last-child .after {
   opacity: 1;
   -webkit-transition: 0.5s;
   transition: 0.5s;
+  color: white;
+  display: grid;
+  place-items: center;
+  font-size: 1.3em;
+  text-decoration: underline;
 }
 
 .container::-webkit-scrollbar {
