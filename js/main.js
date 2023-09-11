@@ -40,3 +40,25 @@ carouselContainer.addEventListener('wheel', (e) => {
 //         }
 //     );
 // });
+
+
+
+const simulateLeftArrowButton = document.getElementById('simulateLeftArrow');
+
+// Fonction pour simuler la touche de la flèche gauche
+function simulateLeftArrowKeyPress() {
+    const event = new KeyboardEvent('keydown', {
+        key: 'ArrowLeft', // Touche de la flèche gauche
+        keyCode: 37, // Code de la touche de la flèche gauche
+        which: 37, // Identifiant de la touche
+        code: 'ArrowLeft', // Code de la touche
+    });
+
+    // Dispatch de l'événement au document
+    const container = document.querySelector('.container');
+    container.dispatchEvent(event);
+    console.log(event)
+}
+
+// Lorsque le bouton est cliqué, simuler la touche de la flèche gauche
+simulateLeftArrowButton.addEventListener('click', simulateLeftArrowKeyPress);
